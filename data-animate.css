@@ -1568,7 +1568,7 @@ Based on the work of http://daneden.me/animate and by Nick Pettit - https://gith
     }
 }
 
-[data-animate~="fadeOutright"] {
+[data-animate~="fadeOutRight"] {
     -webkit-animation-name: fadeOutRight;
     animation-name: fadeOutRight;
 }
