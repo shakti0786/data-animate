@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head lang="en">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Animate Examples</title>
+
+    <meta name="description" content="Example Description">
+    <meta name="viewport" content="initial-scale=1.0,width=device-width">
+
+    <link rel="stylesheet" href="data-animate.css">
+
+    <style>
+
+        .redbox {
+            position: absolute;
+            background-color: red;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            width: 200px;
+            height: 200px;
+        }
+
+    </style>
+
+    <script>
+        window.onload = function () {
+            var redbox = document.querySelector(".redbox");
+
+            redbox.onmousedown = function () {
+                redbox.setAttribute("data-state", "paused");
+                redbox.setAttribute("data-duration", "10s");
+
+                setTimeout(function () {
+                    redbox.setAttribute("data-state", "running");
+                },500);
+
+                return this;
+            };
+        };
+    </script>
+
+</head>
+<body>
+<main>
+    <div class="redbox" data-animate="rollIn" data-duration="5s"></div>
+</main>
+
+</body>
+</html>
