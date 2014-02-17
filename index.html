@@ -18,9 +18,9 @@
 
     <style>
 
-        .redbox {
+        .box {
             position: absolute;
-            background-color: red;
+            background-color: royalblue;
             top: 0;
             right: 0;
             bottom: 0;
@@ -32,27 +32,10 @@
 
     </style>
 
-    <script>
-        window.onload = function () {
-            var redbox = document.querySelector(".redbox");
-
-            redbox.onmousedown = function () {
-                redbox.setAttribute("data-state", "paused");
-                redbox.setAttribute("data-duration", "10s");
-
-                setTimeout(function () {
-                    redbox.setAttribute("data-state", "running");
-                },500);
-
-                return this;
-            };
-        };
-    </script>
-
 </head>
 <body>
 <main>
-    <div class="redbox" data-animate="rollIn" data-duration="5s"></div>
+    <div class="box" data-animate="flip" data-duration="5s"></div>
 </main>
 
 </body>
